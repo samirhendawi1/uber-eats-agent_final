@@ -30,7 +30,7 @@ def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OV
     return chunks
 
 
-def build_vectorstore(force: bool = False):
+def build_vectorstore(force: bool = True):
     """Chunk documents, embed, and persist to Chroma."""
     ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBEDDING_MODEL)
     client = chromadb.PersistentClient(path=CHROMA_DIR)
