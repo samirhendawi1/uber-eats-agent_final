@@ -198,7 +198,6 @@ if not st.session_state.logged_in:
 
         st.markdown("")
         st.caption("**Demo accounts:** `samir` . `yuyan` . `jiaer` . `ce` . `junyan` . `demo`")
-        st.caption("**Password:** `password123` (or `demo` for demo account)")
 
     if submitted:
         user = authenticate(username, password)
