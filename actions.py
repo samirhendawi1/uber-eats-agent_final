@@ -15,7 +15,7 @@ Course concepts:
 from __future__ import annotations
 import random
 from memory import get_state, set_state
-from orders_db import get_order
+from orders_db import get_order, update_order_status, update_order_refund, update_order
 from tickets_db import create_ticket, get_ticket, get_tickets_by_order, get_tickets_by_customer
 from tools import TOOLS
 from vectorstore import retrieve as rag_retrieve
@@ -359,6 +359,10 @@ def _exec_cancel_order(params: dict, customer_id: str) -> str:
         f"based on the order status and policy. Reference the policy naturally."
     )}]
     
+    # Update the order in the database
+    update_order_status(params["order_id"], "Cancelled")
+    update_order_refund(params["order_id"], f"Refund pending - cancellation of {order['total']}")
+    
     return chat_completion(messages, temperature=0.3, max_tokens=256)
 
 
@@ -384,6 +388,10 @@ def _exec_report_missing(params: dict, customer_id: str) -> str:
         status=status,
         resolution=summary,
     )
+    
+    # Update order in database
+    update_order_status(params["order_id"], "Delivered - Reported Issue")
+    update_order_refund(params["order_id"], summary)
     
     return (
         f"**Ticket `{ticket['ticket_id']}` created for Order #{order['order_id']}**\n\n"
@@ -413,6 +421,10 @@ def _exec_report_wrong(params: dict, customer_id: str) -> str:
         resolution=summary,
     )
     
+    # Update order in database
+    update_order_status(params["order_id"], "Delivered - Reported Issue")
+    update_order_refund(params["order_id"], summary)
+    
     return (
         f"**Ticket `{ticket['ticket_id']}` created for Order #{order['order_id']}**\n\n"
         f"{resolution_text}\n\n"
@@ -440,6 +452,10 @@ def _exec_report_delivery(params: dict, customer_id: str) -> str:
         status=status,
         resolution=summary,
     )
+    
+    # Update order in database
+    update_order_status(params["order_id"], "Delivered - Reported Issue")
+    update_order_refund(params["order_id"], summary)
     
     return (
         f"**Ticket `{ticket['ticket_id']}` created for Order #{order['order_id']}**\n\n"
