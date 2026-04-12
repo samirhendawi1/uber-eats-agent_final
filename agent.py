@@ -89,7 +89,6 @@ For out-of-scope:
 - When citing knowledge, reference the source article title
 - Be empathetic, concise, and helpful
 - If a tool requires parameters you don't have, indicate what you have and what's missing
-- If it is out of scope, do not give any answer but just say "I'm sorry, I can only help with Uber Eats topics. How can I assist you?"
 """
 
 
@@ -288,11 +287,11 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
     # ── Step 4: RAG Retrieval (ALWAYS — this is the core) ──
     docs = retrieve(user_message, k=5)
     rag_context = "\n\n".join(
-        f"[Source: {d.metadata.get('title', 'Unknown')} | Category: {d.metadata.get('category', '')} | URL: {d.metadata.get('source_url', '')}]\n{d.page_content}"
+        f"[Source: {getattr(d, 'metadata', {}).get('title', 'Unknown')} | Category: {getattr(d, 'metadata', {}).get('category', '')} | URL: {getattr(d, 'metadata', {}).get('source_url', '')}]\n{getattr(d, 'page_content', str(d))}"
         for d in docs
     )
     sources = [
-        {"title": d.metadata.get("title", ""), "url": d.metadata.get("source_url", ""), "category": d.metadata.get("category", "")}
+        {"title": getattr(d, "metadata", {}).get("title", ""), "url": getattr(d, "metadata", {}).get("source_url", ""), "category": getattr(d, "metadata", {}).get("category", "")}
         for d in docs
     ]
 

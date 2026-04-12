@@ -11,7 +11,7 @@ LLM_API_KEY = os.getenv("LLM_API_KEY", "1007638335")
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 # ── RAG ───────────────────────────────────────────────────────────────
-CHUNK_SIZE = 400         
+CHUNK_SIZE = 400          # tokens (roughly chars/4)
 CHUNK_OVERLAP = 80
 TOP_K = 5
 

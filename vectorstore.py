@@ -1,4 +1,4 @@
-"""Build and query the Chroma vector store for RAG."""
+"""ChromaDB vector store — singleton pattern to avoid NotFoundError on Cloud."""
 
 from __future__ import annotations
 import json, os
@@ -6,21 +6,17 @@ import chromadb
 from chromadb.utils import embedding_functions
 from config import EMBEDDING_MODEL, CHROMA_DIR, KNOWLEDGE_FILE, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K
 
+# Singleton — one collection shared across build + retrieve
+_collection = None
+
 
 class SimpleDocument:
-    """Minimal document class to avoid langchain dependency."""
     def __init__(self, page_content: str, metadata: dict | None = None):
         self.page_content = page_content
         self.metadata = metadata or {}
 
 
-def _load_articles() -> list[dict]:
-    with open(KNOWLEDGE_FILE, "r") as f:
-        return json.load(f)
-
-
 def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
-    """Simple character-based chunking."""
     chunks = []
     start = 0
     while start < len(text):
@@ -30,15 +26,25 @@ def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OV
     return chunks
 
 
-def build_vectorstore(force: bool = True):
-    """Chunk documents, embed, and persist to Chroma."""
+def build_vectorstore(force: bool = False):
+    global _collection
     ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBEDDING_MODEL)
-    client = chromadb.PersistentClient(path=CHROMA_DIR)
+
+    # Use in-memory client on Cloud (no persist issues), persistent locally
+    use_persistent = os.path.isdir(os.path.dirname(CHROMA_DIR))
+    try:
+        if use_persistent:
+            client = chromadb.PersistentClient(path=CHROMA_DIR)
+        else:
+            client = chromadb.Client()
+    except Exception:
+        client = chromadb.Client()
 
     # Check if already built
     try:
         col = client.get_collection("uber_eats_kb", embedding_function=ef)
         if col.count() > 0 and not force:
+            _collection = col
             return col
     except Exception:
         pass
@@ -50,7 +56,9 @@ def build_vectorstore(force: bool = True):
         pass
 
     col = client.create_collection("uber_eats_kb", embedding_function=ef)
-    articles = _load_articles()
+
+    with open(KNOWLEDGE_FILE, "r") as f:
+        articles = json.load(f)
 
     all_docs, all_ids, all_metas = [], [], []
     chunk_id = 0
@@ -68,21 +76,32 @@ def build_vectorstore(force: bool = True):
             chunk_id += 1
 
     col.add(documents=all_docs, ids=all_ids, metadatas=all_metas)
-    print(f"[vectorstore] {len(articles)} articles → {chunk_id} chunks")
+    print(f"[vectorstore] {len(articles)} articles -> {chunk_id} chunks")
+    _collection = col
     return col
 
 
 def retrieve(query: str, k: int = TOP_K) -> list[SimpleDocument]:
-    """Retrieve top-k relevant documents."""
-    ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBEDDING_MODEL)
-    client = chromadb.PersistentClient(path=CHROMA_DIR)
-    col = client.get_collection("uber_eats_kb", embedding_function=ef)
+    global _collection
+    if _collection is None:
+        build_vectorstore()
+    if _collection is None:
+        return []
 
-    results = col.query(query_texts=[query], n_results=k)
+    try:
+        results = _collection.query(query_texts=[query], n_results=k)
+    except Exception:
+        # Rebuild and retry once
+        build_vectorstore(force=True)
+        if _collection is None:
+            return []
+        results = _collection.query(query_texts=[query], n_results=k)
+
     docs = []
-    for i in range(len(results["documents"][0])):
-        docs.append(SimpleDocument(
-            page_content=results["documents"][0][i],
-            metadata=results["metadatas"][0][i],
-        ))
+    if results and results.get("documents") and results["documents"][0]:
+        for i in range(len(results["documents"][0])):
+            docs.append(SimpleDocument(
+                page_content=results["documents"][0][i],
+                metadata=results["metadatas"][0][i] if results.get("metadatas") else {},
+            ))
     return docs
