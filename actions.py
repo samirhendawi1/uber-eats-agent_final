@@ -243,7 +243,7 @@ def _exec_check_refund(params: dict, customer_id: str) -> str:
     
     # Use RAG to get refund policy context
     docs = rag_retrieve("refund status processing time", k=3)
-    policy_context = " ".join(d.page_content for d in docs)[:500]
+    policy_context = " ".join(getattr(d, 'page_content', str(d)) for d in docs)[:500]
     
     refund = order["refund_status"]
     if refund:
@@ -349,7 +349,7 @@ def _exec_cancel_order(params: dict, customer_id: str) -> str:
     
     # Use RAG to get cancellation policy
     docs = rag_retrieve("cancel order cancellation fee policy", k=3)
-    policy_context = "\n".join(f"[{d.metadata.get('title', '')}]: {d.page_content}" for d in docs)
+    policy_context = "\n".join(f"[{getattr(d, 'metadata', {}).get('title', '')}]: {getattr(d, 'page_content', str(d))}" for d in docs)
     
     messages = [{"role": "user", "content": (
         f"Based on these Uber Eats cancellation policies:\n{policy_context}\n\n"
