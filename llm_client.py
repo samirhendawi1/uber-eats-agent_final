@@ -28,7 +28,7 @@ def chat_completion(
     resp = requests.post(url, json=payload, headers=headers, timeout=120)
     resp.raise_for_status()
     data = resp.json()
-    content = data["choices"][0]["message"]["content"]
+    content = data["choices"][0]["message"].get("content") or ""
     # Strip <think>...</think> blocks produced by reasoning-enabled models
     content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
     return content
