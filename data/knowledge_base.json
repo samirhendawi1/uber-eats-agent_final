@@ -1,422 +1,62 @@
 [
-  {
-    "id": "doc_001",
-    "title": "How to report missing items from your order",
-    "category": "Order Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If your Uber Eats order is missing items, you can report the issue directly in the app. Open the Uber Eats app, go to Orders, select the affected order, and tap 'Help'. Choose 'Missing items' and select which items were not included. You can request a refund for the missing items. Uber Eats will review your request and typically process refunds within 3-5 business days. If the missing item was a main dish, you may receive a full refund for that item plus any associated fees. For side items or drinks, a partial refund will be issued. You can also contact support if the in-app process doesn't resolve your issue."
-  },
-  {
-    "id": "doc_002",
-    "title": "Wrong items in your order",
-    "category": "Order Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If you received the wrong items in your Uber Eats order, open the app and navigate to your order history. Select the order with incorrect items and tap 'Help'. Choose 'Wrong items received' and describe what you received versus what you ordered. Take a photo of the incorrect items if possible, as this helps speed up the review process. Uber Eats may offer a refund or credit for the incorrect items. In some cases, the restaurant may offer to remake and redeliver the correct items at no additional charge."
-  },
-  {
-    "id": "doc_003",
-    "title": "How to check your refund status",
-    "category": "Refunds & Payments",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "To check the status of a refund on Uber Eats, open the app and go to Account, then select 'Order History'. Find the order for which you requested a refund and tap on it. If a refund has been approved, you will see a refund confirmation with the amount and estimated processing time. Refunds are typically processed within 3-5 business days, but may take up to 10 business days depending on your bank or payment provider. Credit card refunds appear on your statement within 5-10 business days. Uber Cash credits are applied instantly to your account balance."
-  },
-  {
-    "id": "doc_004",
-    "title": "Order never delivered",
-    "category": "Delivery Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If your Uber Eats order was marked as delivered but you never received it, report the issue immediately through the app. Go to Orders, select the undelivered order, and tap 'Help'. Choose 'Order not delivered'. Provide any additional details such as your delivery instructions or whether you were at the delivery address. Uber Eats will investigate the issue using GPS data and delivery photos. If confirmed, you will receive a full refund. For high-value orders, the investigation may take 24-48 hours. You can also contact support via the in-app chat for urgent issues."
-  },
-  {
-    "id": "doc_005",
-    "title": "Late delivery",
-    "category": "Delivery Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If your Uber Eats delivery arrived significantly later than the estimated time, you may be eligible for a partial refund or credit. Uber Eats tracks delivery times and if the order is more than 30 minutes late from the updated estimated delivery time, you can report the issue. Go to Orders, select the late order, tap 'Help', and choose 'Delivery was late'. Factors that may cause delays include traffic, weather, restaurant preparation time, and driver availability. Uber Eats considers these factors when evaluating late delivery claims."
-  },
-  {
-    "id": "doc_006",
-    "title": "How delivery fees work",
-    "category": "Pricing & Fees",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats delivery fees vary based on several factors including distance from the restaurant, demand in your area, and whether you have an Uber One membership. The delivery fee is shown before you place your order. During peak times, delivery fees may be higher due to increased demand. Uber One members enjoy reduced or zero delivery fees on eligible orders over a minimum amount. Small order fees may apply to orders below a certain dollar amount. Service fees are separate from delivery fees and help cover operational costs."
-  },
-  {
-    "id": "doc_007",
-    "title": "Uber One membership benefits",
-    "category": "Account & Membership",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "Uber One is a membership program that provides benefits across Uber Eats and Uber rides. Benefits include $0 delivery fee on eligible Uber Eats orders over a minimum amount, reduced service fees, exclusive member promotions, and priority support. The membership costs a monthly or annual fee. You can cancel anytime. To subscribe, go to Account in the Uber Eats app and select 'Uber One'. Free trial periods may be available for new members. Benefits apply automatically when you place eligible orders."
-  },
-  {
-    "id": "doc_008",
-    "title": "How to update your payment method",
-    "category": "Account & Payments",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "To update your payment method on Uber Eats, open the app and go to Account, then 'Payment'. You can add a new credit card, debit card, or link a PayPal account. To remove an existing payment method, swipe left on the card and tap delete. You can also set a default payment method that will be used for all future orders. Uber Eats accepts Visa, Mastercard, American Express, Discover, and PayPal. Some regions also support Apple Pay and Google Pay."
-  },
-  {
-    "id": "doc_009",
-    "title": "How to contact Uber Eats support",
-    "category": "Support",
-    "source_url": "https://help.uber.com/en/ubereats",
-    "content": "You can contact Uber Eats support through several channels. The fastest way is through the in-app help section: go to Account, then 'Help'. You can browse help articles or start a chat with a support agent. For urgent issues related to a current order, use the 'Contact Support' option within the active order screen. You can also reach support through the Uber Eats website at help.uber.com. Phone support may be available in some regions. Uber One members have access to priority support with shorter wait times."
-  },
-  {
-    "id": "doc_010",
-    "title": "How promotions and promo codes work",
-    "category": "Promotions",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats offers various promotions including percentage discounts, free delivery, and buy-one-get-one deals. To apply a promo code, go to Account, then 'Promotions', and enter the code. Active promotions are automatically applied at checkout if eligible. Some promotions are limited to specific restaurants or order amounts. Promotions cannot be combined unless stated otherwise. Expired promo codes cannot be reactivated. If a promotion doesn't apply, check the terms and conditions for eligibility requirements."
-  },
-  {
-    "id": "doc_011",
-    "title": "Food quality issues",
-    "category": "Order Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If you received food that was cold, stale, spoiled, or otherwise of poor quality from Uber Eats, you can report the issue through the app. Go to Orders, select the affected order, tap 'Help', and choose 'Food quality issue'. Describe the problem and include photos if possible. Uber Eats will review your report and may issue a refund or credit depending on the severity of the issue. For food safety concerns such as finding foreign objects or experiencing illness, contact support immediately and consider contacting local health authorities."
-  },
-  {
-    "id": "doc_012",
-    "title": "How to cancel an order",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "You can cancel an Uber Eats order before the restaurant starts preparing it for a full refund. Once preparation begins, cancellation fees may apply. To cancel, open the app, go to the active order, and tap 'Cancel Order'. If the restaurant has already started preparing your food, you may be charged a partial or full amount. After the driver has picked up your order, cancellation is typically not available. If you need to cancel for an emergency, contact support through the app."
-  },
-  {
-    "id": "doc_013",
-    "title": "Delivery instructions and notes",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "You can add delivery instructions to help your driver find your location. During checkout, tap 'Add delivery instructions' to include details like gate codes, building numbers, floor information, or specific drop-off preferences. You can choose delivery options: 'Meet at door', 'Leave at door', or 'Meet outside'. Adding clear instructions reduces delivery issues and helps ensure your food arrives correctly. You can also add a note for the restaurant with special requests about food preparation."
-  },
-  {
-    "id": "doc_014",
-    "title": "Scheduled orders",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Uber Eats allows you to schedule orders in advance. You can schedule an order up to 7 days ahead. During checkout, tap 'Schedule for later' and select your preferred delivery date and time window. Scheduled orders are sent to the restaurant at the appropriate time to ensure fresh preparation. You can modify or cancel a scheduled order before the restaurant starts preparing it. Availability of scheduling depends on the restaurant and your location."
-  },
-  {
-    "id": "doc_015",
-    "title": "Group orders",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Group orders allow multiple people to add items to a single Uber Eats order. To start a group order, select a restaurant, tap 'Group Order', and share the link with friends or colleagues. Each person can browse the menu and add their own items. The order organizer reviews all items and places the final order. Payment can be split among participants or paid by the organizer. Group orders have a time limit for adding items."
-  },
-  {
-    "id": "doc_016",
-    "title": "Allergies and dietary restrictions",
-    "category": "Food & Safety",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats recommends that customers with food allergies or dietary restrictions contact the restaurant directly before ordering. Some restaurants list allergen information on their menu items in the app. You can add special instructions to your order to request allergen accommodations, but Uber Eats cannot guarantee that restaurants will follow these requests. For severe allergies, it is strongly recommended to call the restaurant before placing your order. Uber Eats is not responsible for allergen-related issues arising from restaurant food preparation."
-  },
-  {
-    "id": "doc_017",
-    "title": "How ratings work",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "After each delivery, you can rate your experience on Uber Eats. You can rate both the restaurant food quality and the delivery driver separately. Ratings are on a scale of 1 to 5 stars. Your ratings help Uber Eats improve service quality. You can also leave a tip for your delivery driver after the delivery. Ratings are anonymous and restaurants and drivers cannot see who rated them. Consistent low ratings may affect a restaurant's visibility on the platform."
-  },
-  {
-    "id": "doc_018",
-    "title": "Tipping your delivery driver",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "You can tip your Uber Eats delivery driver before or after delivery. A tip suggestion appears during checkout and you can adjust the amount. After delivery, you have up to 1 hour to add or modify your tip. Tips go directly to the driver and are not shared with Uber. Tipping is optional but appreciated by drivers. You can set a default tip percentage in your app settings."
-  },
-  {
-    "id": "doc_019",
-    "title": "Account security and login issues",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "To keep your Uber Eats account secure, use a strong unique password and enable two-factor authentication. If you suspect unauthorized access, change your password immediately and review your order history for unfamiliar transactions. If you are locked out of your account, use the 'Forgot password' option on the login screen. You will receive a reset link via email or SMS. If you cannot access your registered email or phone number, contact Uber Eats support with your account details for identity verification."
-  },
-  {
-    "id": "doc_020",
-    "title": "How to delete your account",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "To delete your Uber Eats account, go to Account, then 'Privacy Settings', and select 'Delete Account'. Note that deleting your account is permanent and will remove your order history, saved addresses, payment methods, and Uber Cash balance. Any pending refunds must be processed before deletion. Account deletion also affects your Uber rides account as they share the same login. Allow up to 30 days for complete data deletion."
-  },
-  {
-    "id": "doc_021",
-    "title": "Uber Eats Pass vs Uber One",
-    "category": "Account & Membership",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "Uber Eats Pass has been replaced by Uber One. If you had an active Eats Pass subscription, it was automatically transitioned to Uber One with expanded benefits. Uber One includes all the benefits of Eats Pass plus additional perks for Uber rides. Existing Eats Pass members retained their subscription price for the remainder of their billing period. New subscribers enroll directly in Uber One."
-  },
-  {
-    "id": "doc_022",
-    "title": "Restaurant preparation time",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Each restaurant on Uber Eats sets its own preparation time based on menu complexity and kitchen capacity. Estimated delivery times shown in the app include restaurant preparation time plus driver travel time. During peak hours, preparation times may be longer. If a restaurant is experiencing high volume, you may see an extended estimated delivery time. Some restaurants allow you to add special instructions that may affect preparation time."
-  },
-  {
-    "id": "doc_023",
-    "title": "Damaged or spilled order",
-    "category": "Order Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If your Uber Eats order arrived damaged or spilled, report it through the app immediately. Go to Orders, select the affected order, tap 'Help', and choose 'Order arrived damaged'. Include photos of the damage for faster processing. Uber Eats will evaluate the extent of the damage and issue an appropriate refund or credit. If only part of the order was damaged, you may receive a partial refund. For completely unusable orders, a full refund is typically provided."
-  },
-  {
-    "id": "doc_024",
-    "title": "How to track your delivery",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Once your Uber Eats order is placed, you can track it in real time through the app. The tracking screen shows the order status: confirmed, being prepared, driver assigned, driver picking up, and on the way. You can see the driver's location on the map and the estimated arrival time. If the driver is having trouble finding your location, you can contact them directly through the app via chat or call. Delivery tracking is available for all orders."
-  },
-  {
-    "id": "doc_025",
-    "title": "Service fees explained",
-    "category": "Pricing & Fees",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats charges a service fee on each order to help cover operational costs including customer support, platform maintenance, and insurance. The service fee is typically a percentage of the order subtotal, usually between 10-15%. Uber One members receive reduced service fees. The exact service fee is displayed during checkout before you place your order. Small order fees may apply separately for orders below a minimum amount, typically around $10-12."
-  },
-  {
-    "id": "doc_026",
-    "title": "Pickup orders",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Uber Eats offers a pickup option where you can order food and pick it up yourself from the restaurant. Pickup orders have no delivery fee and often have reduced service fees. To place a pickup order, toggle the 'Pickup' option at the top of the app. Select a restaurant, place your order, and arrive at the restaurant when notified that your order is ready. Pickup orders cannot be combined with delivery in the same transaction."
-  },
-  {
-    "id": "doc_027",
-    "title": "Alcohol delivery policies",
-    "category": "Food & Safety",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats delivers alcohol in select regions where permitted by local laws. Alcohol orders require ID verification upon delivery. The recipient must be of legal drinking age and present a valid government-issued photo ID. The driver will verify your ID before handing over the order. If ID cannot be verified, the alcohol portion of the order will be returned and refunded. Alcohol delivery hours may differ from regular food delivery hours based on local regulations."
-  },
-  {
-    "id": "doc_028",
-    "title": "Uber Eats gift cards",
-    "category": "Payments",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "Uber Eats gift cards can be purchased online or at retail locations. To redeem a gift card, go to Account, then 'Payment', and select 'Add Uber Cash'. Enter the gift card code to add the balance to your Uber Cash. Uber Cash can be used for Uber Eats orders and Uber rides. Gift card balances do not expire. If your order total exceeds your Uber Cash balance, the remaining amount is charged to your default payment method."
-  },
-  {
-    "id": "doc_029",
-    "title": "Restaurant closed or unavailable",
-    "category": "Order Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If a restaurant appears as unavailable or closed on Uber Eats, it may be outside its operating hours, temporarily paused due to high volume, or permanently closed. You can check the restaurant's listed hours in the app. If a restaurant closes after you've placed an order, you will receive a full refund automatically. You can also set up notifications for favorite restaurants to know when they become available again."
-  },
-  {
-    "id": "doc_030",
-    "title": "Uber Eats for Business",
-    "category": "Business",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats for Business allows companies to set up meal programs for employees. Administrators can set spending limits, restrict restaurant choices, and manage expensing. Employees order through their regular Uber Eats app using their business profile. Companies are billed centrally. Uber Eats for Business offers reporting and analytics on meal program usage."
-  },
-  {
-    "id": "doc_031",
-    "title": "How to reorder a previous meal",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "To quickly reorder a previous meal on Uber Eats, go to Orders and find the past order you want to repeat. Tap 'Reorder' and the same items will be added to your cart. You can modify the order before placing it. If any items are no longer available, the app will notify you. Reordering uses the current menu prices, which may differ from your original order."
-  },
-  {
-    "id": "doc_032",
-    "title": "Delivery driver safety",
-    "category": "Safety",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Uber Eats prioritizes safety for delivery drivers and customers. All drivers undergo background checks before being approved to deliver. You can share your delivery tracking link with friends or family for safety. If you feel unsafe during a delivery, use the emergency button in the app to contact local authorities. Uber Eats has a no-contact delivery option for health and safety. Drivers and customers can report safety concerns through the app."
-  },
-  {
-    "id": "doc_033",
-    "title": "Multiple addresses and saved locations",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "You can save multiple delivery addresses in your Uber Eats account. Go to Account, then 'Saved Places' to add home, work, and other frequently used addresses. You can switch between saved addresses when placing an order. Each address can have its own delivery instructions. Uber Eats uses your selected address to show nearby restaurants and calculate delivery fees."
-  },
-  {
-    "id": "doc_034",
-    "title": "Order minimum requirements",
-    "category": "Pricing & Fees",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Some restaurants on Uber Eats have a minimum order amount. If your order is below the minimum, you may be charged a small order fee. The minimum order amount and any applicable fees are shown during checkout. You can add more items to reach the minimum and avoid the fee. Uber One members may have lower or waived minimum order requirements on eligible restaurants."
-  },
-  {
-    "id": "doc_035",
-    "title": "Uber Eats customer support hours",
-    "category": "Support",
-    "source_url": "https://help.uber.com/en/ubereats",
-    "content": "Uber Eats customer support is available 24/7 through the in-app help center. Live chat support is available during extended hours. For urgent issues related to active deliveries, support is prioritized. Response times may vary based on demand. Uber One members receive priority support with typically shorter wait times. You can also find answers to common questions in the self-service help articles."
-  },
-  {
-    "id": "doc_036",
-    "title": "How to update delivery address after ordering",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If you need to change your delivery address after placing an order, you may be able to do so before the driver picks up your food. Open the active order and tap 'Change address'. Note that changing the address may affect your delivery fee and estimated delivery time. If the new address is significantly farther, additional fees may apply. After the driver has picked up your order, address changes may not be possible."
-  },
-  {
-    "id": "doc_037",
-    "title": "Special requests and customizations",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Many restaurants on Uber Eats allow you to customize your order with special requests. You can add instructions for individual items (such as no onions, extra sauce) and general notes for the restaurant. Some customizations may incur additional charges. The restaurant will do its best to accommodate your requests, but cannot guarantee all modifications. Uber Eats is not responsible if a restaurant cannot fulfill a special request."
-  },
-  {
-    "id": "doc_038",
-    "title": "Uber Eats grocery delivery",
-    "category": "Order Types",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "In addition to restaurant food, Uber Eats also delivers groceries and convenience items in select areas. Browse the 'Grocery' section in the app to find available stores. Grocery orders may have different delivery fees and service fees than restaurant orders. Items may be substituted if out of stock, and you can set substitution preferences. Grocery delivery times may vary from restaurant delivery."
-  },
-  {
-    "id": "doc_039",
-    "title": "What to do if your driver can't find you",
-    "category": "Delivery Issues",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If your Uber Eats driver cannot find your location, they will attempt to contact you through the app via call or message. Make sure your phone notifications are turned on. Provide clear delivery instructions including landmarks, building entrance details, and gate codes. If the driver cannot reach you within the allotted waiting time, the order may be marked as delivered or cancelled. To avoid this, respond promptly to driver communications."
-  },
-  {
-    "id": "doc_040",
-    "title": "Uber Eats surge pricing",
-    "category": "Pricing & Fees",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "During periods of high demand, Uber Eats delivery fees may increase through dynamic pricing (sometimes called surge pricing). This helps ensure there are enough delivery drivers available in your area. Surge pricing is clearly displayed before you confirm your order. You can wait for prices to return to normal or proceed with the order. Uber One members may experience reduced impact from surge pricing on eligible orders."
-  },
-  {
-    "id": "doc_041",
-    "title": "Accessibility features on Uber Eats",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "Uber Eats is committed to accessibility. The app supports screen readers and large text options. You can enable accessibility features through your phone's system settings. If you require special accommodations for delivery (such as the driver coming to your door for mobility reasons), add this information in your delivery instructions. Contact support if you experience any accessibility barriers while using the app."
-  },
-  {
-    "id": "doc_042",
-    "title": "How to leave feedback about a restaurant",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "After receiving your order on Uber Eats, you can rate the restaurant and leave specific feedback about food quality, portion size, accuracy, and packaging. Your feedback helps restaurants improve and helps other customers make informed choices. Feedback is shared with the restaurant but your identity remains anonymous. Restaurants may respond to feedback through Uber Eats merchant tools. Constructive feedback is encouraged."
-  },
-  {
-    "id": "doc_043",
-    "title": "Order receipt and expense tracking",
-    "category": "Payments",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "A digital receipt is generated for every Uber Eats order. You can find receipts in your order history by tapping on any past order. Receipts include itemized costs, fees, taxes, tips, and any promotions applied. You can email receipts to yourself for expense tracking. For business orders, receipts can be automatically forwarded to expense management systems if set up through Uber Eats for Business."
-  },
-  {
-    "id": "doc_044",
-    "title": "Uber Eats availability by location",
-    "category": "General",
-    "source_url": "https://help.uber.com/en/ubereats",
-    "content": "Uber Eats is available in over 6,000 cities worldwide across more than 45 countries. Availability of restaurants and delivery options varies by location. To check if Uber Eats is available in your area, download the app and enter your address. In some areas, only pickup may be available without delivery. New restaurants and areas are added regularly."
-  },
-  {
-    "id": "doc_045",
-    "title": "Managing notifications and alerts",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "You can customize Uber Eats notifications in the app settings. Choose which alerts you want to receive, including order updates, promotional offers, delivery status, and account activity. Push notifications for order status are recommended to stay informed about your delivery. You can disable marketing notifications while keeping essential order updates. Email notification preferences can also be managed separately."
-  },
-  {
-    "id": "doc_046",
-    "title": "Uber Eats favorites and saved restaurants",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "You can save your favorite restaurants on Uber Eats by tapping the heart icon on any restaurant listing. Access your saved favorites from the home screen. Saved restaurants make it easy to quickly reorder from places you love. You can also receive notifications when your favorite restaurants have special promotions or return from being offline."
-  },
-  {
-    "id": "doc_047",
-    "title": "No-contact delivery option",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Uber Eats offers a no-contact delivery option for added safety. Select 'Leave at door' as your delivery preference during checkout. The driver will place your order at your door, take a photo as confirmation, and notify you. You will receive the photo in the app. This option is available for most orders except those requiring age verification such as alcohol deliveries."
-  },
-  {
-    "id": "doc_048",
-    "title": "Uber Eats in-store pickup flow",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "When you choose pickup on Uber Eats, you will receive a notification when your order is ready for collection. Go to the restaurant and show your order confirmation or name to the staff. Some restaurants have a dedicated Uber Eats pickup area. Make sure to pick up your order within the specified time window, as restaurants may discard uncollected orders after a certain period."
-  },
-  {
-    "id": "doc_049",
-    "title": "Double and multiple orders from one restaurant",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "You can place multiple orders from the same restaurant on Uber Eats. Each order is processed and delivered separately. If you want everything in one delivery, add all items to a single cart before checkout. Multiple simultaneous orders to the same address may be assigned to different drivers. There is no limit to the number of orders you can place in a day."
-  },
-  {
-    "id": "doc_050",
-    "title": "Reporting a safety concern",
-    "category": "Safety",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "If you experience a safety concern during an Uber Eats delivery, report it immediately through the app. Go to Help and select 'I have a safety concern'. For emergencies, use the in-app emergency button to contact local authorities directly. Safety reports are reviewed by Uber's dedicated safety team. You can report concerns about driver behavior, food tampering, or any threatening situations. Uber takes safety reports seriously and may take action against accounts involved in safety violations."
-  },
-  {
-    "id": "doc_051",
-    "title": "Uber Eats referral program",
-    "category": "Promotions",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats offers a referral program where you can earn credits by inviting friends. Go to Account and find your unique referral code. Share the code with friends. When a new user signs up using your referral code and places their first order, both of you may receive Uber Eats credit. Referral credit amounts and terms vary by region and may change over time. There may be a limit to the number of referral credits you can earn."
-  },
-  {
-    "id": "doc_052",
-    "title": "Uber Eats merchant support basics",
-    "category": "Business",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Restaurants on Uber Eats have access to Uber Eats Manager, a dashboard for managing orders, menus, promotions, and analytics. Merchants can update their menus, adjust prices, set preparation times, and pause orders during busy periods. For technical issues with the merchant dashboard or tablet, restaurant partners can contact Uber Eats merchant support through the Uber Eats Manager app or website."
-  },
-  {
-    "id": "doc_053",
-    "title": "How Uber Eats selects your delivery driver",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Uber Eats uses an algorithm to assign delivery drivers based on proximity to the restaurant, estimated delivery time, driver ratings, and current demand. The system aims to minimize delivery time while balancing driver availability. In some cases, your order may be batched with another delivery if both orders are going in the same direction. This helps reduce delivery costs but may slightly increase delivery time."
-  },
-  {
-    "id": "doc_054",
-    "title": "Tax and regulatory fees on Uber Eats",
-    "category": "Pricing & Fees",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Uber Eats orders include applicable taxes and regulatory fees based on your location. These are calculated and displayed at checkout. Tax rates vary by jurisdiction. Some cities or regions impose additional regulatory fees on food delivery services. These fees are passed through to the customer and are shown as a separate line item on your receipt. Uber Eats complies with all local tax and regulatory requirements."
-  },
-  {
-    "id": "doc_055",
-    "title": "How to edit items in your cart",
-    "category": "Order Management",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Before placing your order on Uber Eats, you can edit items in your cart by tapping on any item to modify quantities, customizations, or special instructions. To remove an item, swipe left or tap the remove button. You can also add items from the same restaurant. If you want to order from a different restaurant, you'll need to clear your current cart first, as Uber Eats allows only one restaurant per cart for delivery orders."
-  },
-  {
-    "id": "doc_056",
-    "title": "Uber Eats customer loyalty programs",
-    "category": "Promotions",
-    "source_url": "https://help.uber.com/en/ubereats/section/guide-to-uber-eats?nodeId=3c389e7a-a5cc-49c8-86c9-2a6c4e6114b0",
-    "content": "Some restaurants on Uber Eats offer their own loyalty programs where you can earn rewards for repeat orders. Look for the loyalty badge on restaurant listings. Rewards may include free items, discounts, or exclusive menu items. Restaurant loyalty progress is tracked automatically in the app. These programs are managed by individual restaurants and terms vary by restaurant."
-  },
-  {
-    "id": "doc_057",
-    "title": "Uber Eats delivery zones",
-    "category": "Delivery",
-    "source_url": "https://help.uber.com/en/ubereats/section/help-with-an-order?nodeId=3356ac65-5a3f-4c8b-b466-37e7a24ee8c0",
-    "content": "Each restaurant on Uber Eats has a defined delivery zone based on distance and delivery time. Restaurants may not appear in your search if you are outside their delivery zone. Delivery zones are set to ensure food arrives fresh and within a reasonable time. Larger chain restaurants may have wider delivery zones than small local restaurants. You can see which restaurants deliver to your address by entering it in the app."
-  },
-  {
-    "id": "doc_058",
-    "title": "Uber Eats data privacy",
-    "category": "Account",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "Uber Eats collects data to provide and improve its services, including your order history, location data, and payment information. You can review Uber's privacy policy for full details on data collection and usage. You can request a copy of your personal data through the app under Privacy Settings. You can also request deletion of your data, which will result in account closure. Uber complies with applicable privacy regulations including GDPR and CCPA."
-  },
-  {
-    "id": "doc_059",
-    "title": "Reporting an unauthorized charge",
-    "category": "Payments",
-    "source_url": "https://help.uber.com/en/ubereats/section/account-and-payment?nodeId=5e1a3c4f-5c96-4994-a78f-4283b0c1bff7",
-    "content": "If you see an unauthorized charge from Uber Eats on your payment method, contact Uber Eats support immediately. Provide details including the charge amount, date, and payment method. Uber will investigate the charge and issue a refund if it was unauthorized. You should also change your password and review your account security settings. If you suspect your account has been compromised, report it through the security section in the app."
-  },
-  {
-    "id": "doc_060",
-    "title": "Uber Eats restaurant search and filters",
-    "category": "General",
-    "source_url": "https://help.uber.com/en/ubereats",
-    "content": "You can search for specific restaurants, cuisines, or dishes on Uber Eats using the search bar. Filters allow you to narrow results by cuisine type, dietary preferences (vegetarian, vegan, gluten-free), price range, delivery time, rating, and promotions. Sort options include recommended, most popular, rating, delivery time, and distance. The home screen shows curated categories and personalized recommendations based on your order history."
-  }
+  {"id":"doc_001","title":"Wrong or missing items","category":"Order Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/wrong-or-missing-items?nodeId=598f96f1-2d4f-4143-90de-dc2fdbf505cf","content":"Stores try their best to fulfill every order, but sometimes they must remove an out-of-stock item from your order. Please check your final receipt to see if the missing item(s) were already taken off. If you still have an issue, send us the details using the form below about your missing or incorrect items. Please complete this form within 48 hours to be eligible for a refund. Requests outside of this time window will not be eligible for a refund. We'll review and make adjustments as necessary."},
+  {"id":"doc_002","title":"Missing items","category":"Order Issues","source_url":"https://help.uber.com/en/ubereats/stores/article/missing-items?nodeId=63604d59-46cd-465e-9e7d-7ad3a5fbb238","content":"If there were item(s) missing from the order you received, please let us know here. While we will not be able to replace the item(s), you may be eligible for a refund or credit. When items are missing, we refund the customer the sales price of the item (including tax/VAT) at the time of the order. If an entire order is incorrect, the customer is refunded for the sales price of the entire order (including tax/VAT) and the delivery fee."},
+  {"id":"doc_003","title":"My order is wrong","category":"Order Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/my-order-is-wrong?nodeId=93fe8ec6-1f78-4279-a574-177d122fda26","content":"Please contact us within 48 hours to get the best-possible support experience. After this time-frame, we may be unable to provide a refund or other resolution. Photos help us understand what happened. Please attach a photo of the items you received and/or the receipt of the wrong order (check the delivery bag for a receipt)."},
+  {"id":"doc_004","title":"Order never arrived","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/order-never-arrived?nodeId=23e258f9-8040-49f1-a74f-0fdf9fef6cba","content":"If you selected the delivery option Leave at door, please check your door to make sure your order has not already arrived. If a delivery person made a reasonable effort to contact you when arriving at your requested location, you may not be eligible for a refund."},
+  {"id":"doc_005","title":"My order never arrived","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/my-order-never-arrived?nodeId=dd225ffc-ba29-4bba-a85e-a9d1feecc25e","content":"If a delivery person made a reasonable effort to contact you after arriving at your delivery address, you may not be eligible for a refund. If your order shows as delivered but you did not receive it, report the issue through the app within 48 hours. Uber will investigate using GPS data and delivery confirmation photos."},
+  {"id":"doc_006","title":"My order is taking longer than expected","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/my-order-is-taking-longer-than-expected?nodeId=496e837c-e360-4f40-8efb-a07465381697","content":"Merchants and delivery people do their best to deliver your food within the estimated delivery time, but external factors may cause delays (for example, if the merchant is busier than normal, your order is a large order, there's unexpected traffic, or bad weather conditions). If your order is taking longer than expected, check your delivery person's ETA in the app or contact them directly for details. Note: If your delivery person arrived, attempted to contact you, and couldn't deliver the order, you are charged for the order."},
+  {"id":"doc_007","title":"Late delivery compensation","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/delayed-order-arrival?nodeId=a733429a-624b-44b6-99b9-041a9928d089","content":"For orders arriving 20+ minutes past the estimated delivery time range, Uber may provide a refund or issue Uber credits depending on the delay when you contact the support team. Please be sure to contact us within 48 hours for the best possible support experience. After this timeframe, we may be unable to provide a refund or other resolution. If the order is past the Latest Arrival By time, you can cancel your order and receive a refund, or receive Uber Cash worth 20% of your order price if you keep the order."},
+  {"id":"doc_008","title":"What is the Uber Eats cancellation policy","category":"Cancellation","source_url":"https://help.uber.com/en/ubereats/restaurants/article/what-is-the-uber-eats-cancellation-policy-?nodeId=78c4c326-15ba-4d6a-9fd2-d8724f525477","content":"You are guaranteed a free cancellation up until the merchant has accepted your order. Cancellations made after the merchant has accepted may incur charges. A pop up appears confirming you'd like to cancel and alerts you to any potential charges. From the bottom menu bar, select the Account icon. Select the cancelled order."},
+  {"id":"doc_009","title":"I was charged for cancelling my order","category":"Cancellation","source_url":"https://help.uber.com/en/ubereats/restaurants/article/i-was-charged-for-cancelling-my-order?nodeId=92f2ec03-65de-4fb8-9c50-b8fb8ea6a8aa","content":"Cancellations may happen for a variety of reasons. We can only guarantee a refund if you cancel before the store has accepted your order. We may be able to offer adjustments on orders that are canceled due to situations like unexpected long wait times, or store-initiated cancellations. Also, please be sure to contact us within 48 hours of a cancellation so we can provide the best possible support experience. Beyond that time frame, we may be unable to provide a refund or other resolution."},
+  {"id":"doc_010","title":"I was charged for cancellation","category":"Cancellation","source_url":"https://help.uber.com/en/ubereats/restaurants/article/i-was-charged-for-cancellation?nodeId=f5d941f8-5a5f-41b8-8342-91fb7c28745c","content":"The delivery person might cancel the delivery if they can't find or reach you. If a delivery person wasn't able to reach you but made a reasonable effort to contact you after arriving at your requested location, you may not be eligible for a refund. Please note: If a customer cancels an order, we can only guarantee a refund if the order is canceled before the store accepts it. Before the delivery partner picks up your order, you will be charged the total order amount minus the delivery fee. After the delivery partner picks up your order, the full order amount will be charged."},
+  {"id":"doc_011","title":"My order was canceled FAQ","category":"Cancellation","source_url":"https://help.uber.com/en/ubereats/restaurants/article/my-order-was-canceled-faq?nodeId=f1f17a0b-33bd-4e99-94ce-016de5bea7a9","content":"It's possible that a delivery person might cancel the delivery if they're unable to find or reach you. When arriving at your delivery address, they're prompted to contact you so keep your phone nearby when you're expecting a delivery. If a delivery person made a reasonable effort to contact you after arriving at your delivery address, you may not be eligible for a refund."},
+  {"id":"doc_012","title":"Cancel my order","category":"Cancellation","source_url":"https://help.uber.com/en/ubereats/restaurants/article/cancel-my-order?nodeId=476b770f-f9d9-4c63-ae00-12e3e8155e9e","content":"The cancellation fee will be charged with the delivery status. Please contact our Support Center through the Chat with us below on the Cancel my Order help page. To cancel your order because of an incorrect delivery address, contact your delivery partner directly in the Uber Eats app. Once a promotion code has been applied to an order, we are unable to return the promotion code to the account or refund the promotional amount, even if the order is canceled or not completed."},
+  {"id":"doc_013","title":"Managing refunds for missing or incorrect orders","category":"Refunds","source_url":"https://help.uber.com/en/merchants-and-restaurants/article/managing-refunds-for-missing-or-incorrect-orders-?nodeId=9aa57e9b-8bbf-4aa7-91d6-96ca77682dd2","content":"When items are missing, we'll refund the customer the sales price of the item (including tax/VAT) at the time of the order. If an entire order is incorrect, the customer is refunded for the sales price of the entire order (including tax/VAT) and the delivery fee. Total refunds (less delivery fees) are deducted directly from restaurant payouts. Every order error adjustment is evaluated on a case-by-case basis. Multiple factors are considered and we have measures in place to protect against potentially fraudulent customer or delivery partner reports."},
+  {"id":"doc_014","title":"Order errors and refund policy","category":"Refunds","source_url":"https://merchants.ubereats.com/us/en/order-errors/","content":"Most orders placed on Uber Eats go off without a hitch. A small portion of orders have errors reported by the customer, the delivery person, or the merchant. Order error adjustments are the eligible customer refund costs that are deducted from stores' payouts for circumstances within merchants' control, and after fraud checks. We track customer refund history and block customers who abuse our refund policy from submitting claims. We require photos to be submitted in many cases as evidence before making a refund decision. We enforce minimum delivery person satisfaction ratings from both customers and merchants. Delivery people who have a significant number of missing item reports associated with their deliveries are automatically flagged in our systems."},
+  {"id":"doc_015","title":"How to get a refund on Uber Eats","category":"Refunds","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats offers refunds to customers who are not satisfied with their orders. You can contact Uber Eats customer service through the app. Whether you want to cancel an order or file a complaint about the order you received, use the Uber Eats app or website. For missing or incorrect orders, you need to report the problem to Uber Eats within 48 hours to get your money back. Besides immediate cancellations, you may get a refund from Uber Eats for mistakes made by the restaurant or delivery staff. Uber may use AI-photo verification to process refunds instantly to your original payment method or as Uber Cash."},
+  {"id":"doc_016","title":"How to contact support","category":"Support","source_url":"https://help.uber.com/en/ubereats/restaurants/article/how-to-contact-support?nodeId=7ad3ef19-012f-43e6-a711-113935b0cb7b","content":"We provide support via our in-app platform which can be accessed anytime by tapping HELP in the app. You can contact support 24/7 via any of the articles below. Diamond users will have access to our premium support line. The fastest way to reach support is through the in-app help section. You can also reach support through the Uber Eats website at help.uber.com."},
+  {"id":"doc_017","title":"What is Uber Eats","category":"General","source_url":"https://help.uber.com/en/ubereats/restaurants/article/what-is-uber-eats-?nodeId=fbf73e2a-c21f-4a48-8333-c874ae195fd1","content":"Uber Eats is our food delivery platform that makes getting great food from your favorite local restaurants as easy as requesting a ride. The Uber Eats app connects you with a broad range of local restaurants and food, so you can order from the full menus of your local favorites whenever you want."},
+  {"id":"doc_018","title":"How to place an order on Uber Eats","category":"Ordering","source_url":"https://help.uber.com/en/ubereats/restaurants/article/how-to-place-an-order-on-uber-eats/?nodeId=509d1b2f-087c-4dac-9e94-6ab248e87491","content":"To place an order: Sign in (or create an account) and set your delivery address. Choose the restaurant you want to order from. Select your items and tap Add to Cart. To place your order, select View cart or Checkout. Review your order and tap Place Order. When using for business purposes, switch to your business profile before completing your order. Track your order's progress. If using the app, ensure your volume is on to hear when your order arrives."},
+  {"id":"doc_019","title":"How do I apply a promo code","category":"Promotions","source_url":"https://help.uber.com/en/ubereats/restaurants/article/how-do-i-apply-a-promo-code?nodeId=a9f04d28-534e-4898-ac4f-eb6c82398ff9","content":"Some restaurant promos are automatically added to your account and will apply to your order before any other promos. You may only use one promo per order. To apply a promo code: go to checkout, tap Add promo code in the Payment section, paste your code, and tap Apply. Store promos will automatically be applied first, with the highest value account promo added next."},
+  {"id":"doc_020","title":"How do promo codes work","category":"Promotions","source_url":"https://help.uber.com/ubereats/restaurants/article/how-do-promo-codes-work?nodeId=ad0d2531-ada6-4aa7-9b01-a17187399571","content":"Store promos will automatically be applied first, with the highest value account promo added next. You can select a preferred promo code to apply to a specific order, or none to save them for future orders. Some promos only apply to specific cities, states, countries, etc. Promos can't be combined - only one promo code can be applied to an order and if it's for a specific amount, any unused amount does not roll over to another order. Some promos may only apply for certain user types; for example, first-time users. Rides promos do not apply to delivery or pickup orders."},
+  {"id":"doc_021","title":"Uber One membership benefits","category":"Membership","source_url":"https://www.uber.com/us/en/uber-one/","content":"Uber One is a subscription that auto-renews at $9.99/month or $99.99/year. Members get $0 Delivery Fee on standard delivery within at least 3 miles and discounted Service Fee from participating stores when meeting order minimums. Members earn Uber One credits after completion of eligible rides, redeemable on eligible eats and rides orders. You can cancel your membership at any time in the Uber One section of the Uber app by selecting Manage Membership, then End Membership. If you cancel less than 24 hours before your next renewal day, you may see a charge that will be automatically refunded. Student membership available at $4.99/month."},
+  {"id":"doc_022","title":"Uber One cancellation and refund","category":"Membership","source_url":"https://help.uber.com/en/ubereats/restaurants/article/uber-one-cancellation-and-refund?nodeId=2c21ad9e-2795-4b62-b3f8-95155ce9dd27","content":"No penalties or fees will be incurred even if the contract is canceled during the contract period. If you cancel UberOne within 30 days and have not used any UberOne benefits, you will receive a full refund. When you cancel Uber One, you can still access your benefits until the end of the current billing period."},
+  {"id":"doc_023","title":"Eats Pass cancellation and refund","category":"Membership","source_url":"https://help.uber.com/en/ubereats/restaurants/article/eats-pass-cancellation-and-refund?nodeId=84054a89-35d2-4794-a50e-d2f96690eef0","content":"You can cancel Eats Pass at any time up to 24 hours before your next scheduled payment. Otherwise, you'll be charged for the next cycle. Open the Uber Eats app. Tap the profile icon on the bottom menu bar to see your account. Tap Eats Pass to open your Eats Pass hub. In the hub, tap Manage membership. Tap End membership and follow the on-screen instructions. When you cancel Eats Pass, you can still access your benefits until the end of the current billing period."},
+  {"id":"doc_024","title":"Delayed order arrival","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/delayed-order-arrival?nodeId=a733429a-624b-44b6-99b9-041a9928d089","content":"Estimated time of delivery may change based on traffic and order progress. Latest arrival by time is confirmed when your order is accepted by the restaurant. If the delivery partner has not yet arrived nearby after this time, please contact our support team. If the restaurant has not yet accepted your order, you can cancel it via the app without any cancellation fees. If you need to cancel after the restaurant has accepted your order, please contact our support team. Before the delivery partner picks up your order, you will be charged the total order amount minus the delivery fee. After the delivery partner picks up your order, the full order amount will be charged."},
+  {"id":"doc_025","title":"Uber Eats delivery fees and pricing","category":"Pricing","source_url":"https://www.ubereats.com/promo","content":"Delivery fees vary based on distance, demand, and restaurant. Uber One members enjoy $0 delivery fees on eligible orders over minimum amounts. Small order fees may apply to orders below a certain dollar amount. Service fees are separate from delivery fees and help cover operational costs. Additional and optional fees may be charged for Priority Delivery and Long Range Delivery. Tips go directly to the delivery person and are not included in the delivery fee."},
+  {"id":"doc_026","title":"Uber Eats return and refund policy","category":"Refunds","source_url":"https://help.uber.com/en/ubereats","content":"For food orders, if an order is incorrect, missing items, or arrives damaged, you generally have 48 hours to report the issue through the Help section of the app. Uber Eats may use AI-photo verification to process refunds instantly to your original payment method or as Uber Cash. For non-perishable retail items ordered via Uber Eats, a Return from Door service is available in select markets where a courier picks up the return. Uber One members may have the return fee waived."},
+  {"id":"doc_027","title":"What if we forgot an item for an order","category":"Order Issues","source_url":"https://help.uber.com/merchants-and-restaurants/article/what-if-we-forgot-an-item-for-an-order?nodeId=63184a5d-4ccd-4c9d-bc1e-751079987b9d","content":"Please contact your delivery person to coordinate a return to the restaurant. You can reach out to them in the Order history section of the Uber Eats Orders by selecting the clock icon on your screen. If the order has been delivered or the delivery person cannot go back to the restaurant, contact Uber support. We'll reach out to the customer to confirm they still want the missing item. If they don't want the missing item, we'll adjust the total sale of the order and refund the customer for the missing item."},
+  {"id":"doc_028","title":"Delivery by merchant staff late delivery","category":"Delivery Issues","source_url":"https://help.uber.com/en/ubereats/restaurants/article/delivery-by-merchant%E2%80%99s-staff-my-order-is-taking-longer-than-expected?nodeId=6ae25895-517f-42fc-9cda-9feac6016ae8","content":"When stores use their own delivery staff, real-time tracking of the delivery staff may not be available on the Uber Eats app. However, you can still monitor the app for updates on your order status. If you have questions regarding your delivery, feel free to contact the store directly using the Call store button on the order tracking page. For orders arriving 20+ minutes past the estimated delivery time range, we may provide a refund or issue Uber credits depending on the delay when you contact our support team. Please be sure to contact us within 48 hours."},
+  {"id":"doc_029","title":"Food quality and safety issues","category":"Food Quality","source_url":"https://help.uber.com/en/ubereats","content":"If you received food that was cold, stale, spoiled, or otherwise of poor quality from Uber Eats, you can report the issue through the app. Go to Orders, select the affected order, tap Help, and choose Food quality issue. Describe the problem and include photos if possible. Uber Eats will review your report and may issue a refund or credit depending on the severity of the issue. For food safety concerns such as finding foreign objects or experiencing illness, contact support immediately. Customer food quality complaints including food taste or integrity are tracked as order errors."},
+  {"id":"doc_030","title":"Damaged or spilled order","category":"Order Issues","source_url":"https://help.uber.com/en/ubereats","content":"If your Uber Eats order arrived damaged or spilled, report it through the app immediately. Go to Orders, select the affected order, tap Help, and choose Order arrived damaged. Include photos of the damage for faster processing. Uber Eats will evaluate the extent of the damage and issue an appropriate refund or credit. If only part of the order was damaged, you may receive a partial refund. For completely unusable orders, a full refund is typically provided. Please report within 48 hours."},
+  {"id":"doc_031","title":"How to track your delivery","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"Once your Uber Eats order is placed, you can track it in real time through the app. The tracking screen shows the order status: confirmed, being prepared, driver assigned, driver picking up, and on the way. You can see the driver's location on the map and the estimated arrival time. If the driver is having trouble finding your location, you can contact them directly through the app via chat or call."},
+  {"id":"doc_032","title":"Delivery instructions and notes","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"You can add delivery instructions to help your driver find your location. During checkout, tap Add delivery instructions to include details like gate codes, building numbers, floor information, or specific drop-off preferences. You can choose delivery options: Meet at door, Leave at door, or Meet outside. Adding clear instructions reduces delivery issues."},
+  {"id":"doc_033","title":"No-contact delivery option","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats offers a no-contact delivery option for added safety. Select Leave at door as your delivery preference during checkout. The driver will place your order at your door, take a photo as confirmation, and notify you. You will receive the photo in the app. This option is available for most orders except those requiring age verification such as alcohol deliveries."},
+  {"id":"doc_034","title":"Tipping your delivery driver","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"You can tip your Uber Eats delivery driver before or after delivery. A tip suggestion appears during checkout and you can adjust the amount. After delivery, you have up to 1 hour to add or modify your tip. Tips go directly to the driver and are not shared with Uber. Tipping is optional but appreciated by drivers."},
+  {"id":"doc_035","title":"Scheduled orders","category":"Ordering","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats allows you to schedule orders in advance. You can schedule an order up to 7 days ahead. During checkout, tap Schedule for later and select your preferred delivery date and time window. Scheduled orders are sent to the restaurant at the appropriate time to ensure fresh preparation. You can modify or cancel a scheduled order before the restaurant starts preparing it."},
+  {"id":"doc_036","title":"Group orders","category":"Ordering","source_url":"https://help.uber.com/en/ubereats","content":"Group orders allow multiple people to add items to a single Uber Eats order. To start a group order, select a restaurant, tap Group Order, and share the link with friends or colleagues. Each person can browse the menu and add their own items. The order organizer reviews all items and places the final order. Payment can be split among participants or paid by the organizer."},
+  {"id":"doc_037","title":"Pickup orders","category":"Ordering","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats offers a pickup option where you can order food and pick it up yourself from the restaurant. Pickup orders have no delivery fee and often have reduced service fees. To place a pickup order, toggle the Pickup option at the top of the app. Select a restaurant, place your order, and arrive at the restaurant when notified that your order is ready."},
+  {"id":"doc_038","title":"Account security and login issues","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"To keep your Uber Eats account secure, use a strong unique password and enable two-factor authentication. If you suspect unauthorized access, change your password immediately and review your order history for unfamiliar transactions. If you are locked out of your account, use the Forgot password option on the login screen. You will receive a reset link via email or SMS. Chat support is available for sign-in issues."},
+  {"id":"doc_039","title":"How to update payment method","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"To update your payment method on Uber Eats, open the app and go to Account, then Payment. You can add a new credit card, debit card, or link a PayPal account. Uber Eats accepts Visa, Mastercard, American Express, Discover, PayPal, Apple Pay and Google Pay. You can set a default payment method that will be used for all future orders."},
+  {"id":"doc_040","title":"How ratings work","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"After each delivery, you can rate your experience on Uber Eats. You can rate both the restaurant food quality and the delivery driver separately. Ratings are on a scale of 1 to 5 stars. Your ratings help Uber Eats improve service quality. Ratings are anonymous and restaurants and drivers cannot see who rated them. Consistent low ratings may affect a restaurant's visibility on the platform."},
+  {"id":"doc_041","title":"Uber Eats for Business","category":"Business","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats for Business allows companies to set up meal programs for employees. Administrators can set spending limits, restrict restaurant choices, and manage expensing. Employees order through their regular Uber Eats app using their business profile. Companies are billed centrally. Organizations earn $20 in Uber for Business credits for every $200 spent on valid programs."},
+  {"id":"doc_042","title":"Alcohol delivery policies","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats delivers alcohol in select regions where permitted by local laws. Alcohol orders require ID verification upon delivery. The recipient must be of legal drinking age and present a valid government-issued photo ID. The driver will verify your ID before handing over the order. If ID cannot be verified, the alcohol portion of the order will be returned and refunded."},
+  {"id":"doc_043","title":"Uber Eats gift cards","category":"Payments","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats gift cards can be purchased online or at retail locations starting at $15. To redeem a gift card, go to Account, then Payment, and select Add Uber Cash. Enter the gift card code to add the balance to your Uber Cash. Uber Cash can be used for Uber Eats orders and Uber rides. Gift card balances do not expire. If your order total exceeds your Uber Cash balance, the remaining amount is charged to your default payment method."},
+  {"id":"doc_044","title":"Reporting a safety concern","category":"Safety","source_url":"https://help.uber.com/en/ubereats","content":"If you experience a safety concern during an Uber Eats delivery, report it immediately through the app. Go to Help and select I have a safety concern. For emergencies, use the in-app emergency button to contact local authorities directly. Safety reports are reviewed by Uber's dedicated safety team. You can report concerns about driver behavior, food tampering, or any threatening situations."},
+  {"id":"doc_045","title":"Uber Eats availability and delivery zones","category":"General","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats is available in over 6,000 cities worldwide across more than 45 countries. Each restaurant has a defined delivery zone based on distance and delivery time. Restaurants may not appear in your search if you are outside their delivery zone. You can check availability by entering your address in the app."},
+  {"id":"doc_046","title":"Service fees explained","category":"Pricing","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats charges a service fee on each order to help cover operational costs including customer support, platform maintenance, and insurance. The service fee is typically a percentage of the order subtotal, usually between 10-15%. Uber One members receive reduced service fees. Small order fees may apply separately for orders below a minimum amount. All fees are displayed during checkout before you place your order."},
+  {"id":"doc_047","title":"Tax and regulatory fees","category":"Pricing","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats orders include applicable taxes and regulatory fees based on your location. These are calculated and displayed at checkout. Tax rates vary by jurisdiction. Some cities or regions impose additional regulatory fees on food delivery services. These fees are passed through to the customer and are shown as a separate line item on your receipt."},
+  {"id":"doc_048","title":"Unauthorized charge","category":"Payments","source_url":"https://help.uber.com/en/ubereats","content":"If you see an unauthorized charge from Uber Eats on your payment method, contact Uber Eats support immediately. Provide details including the charge amount, date, and payment method. Uber will investigate the charge and issue a refund if it was unauthorized. You should also change your password and review your account security settings."},
+  {"id":"doc_049","title":"Order receipt and expense tracking","category":"Payments","source_url":"https://help.uber.com/en/ubereats","content":"A digital receipt is generated for every Uber Eats order. You can find receipts in your order history by tapping on any past order. Receipts include itemized costs, fees, taxes, tips, and any promotions applied. You can email receipts to yourself for expense tracking. For business orders, receipts can be automatically forwarded to expense management systems."},
+  {"id":"doc_050","title":"Allergies and dietary restrictions","category":"Food Quality","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats recommends that customers with food allergies or dietary restrictions contact the restaurant directly before ordering. Some restaurants list allergen information on their menu items in the app. You can add special instructions to your order to request allergen accommodations, but Uber Eats cannot guarantee that restaurants will follow these requests. For severe allergies, call the restaurant before placing your order."},
+  {"id":"doc_051","title":"Referral program","category":"Promotions","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats offers a referral program where you can earn credits by inviting friends. Go to Account and find your unique referral code. Share the code with friends. When a new user signs up using your referral code and places their first order, both of you may receive Uber Eats credit. Referral credit amounts and terms vary by region."},
+  {"id":"doc_052","title":"Data privacy","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats collects data to provide and improve its services, including your order history, location data, and payment information. You can review Uber's privacy policy for full details. You can request a copy of your personal data through the app under Privacy Settings. You can also request deletion of your data, which will result in account closure. Uber complies with applicable privacy regulations including GDPR and CCPA."},
+  {"id":"doc_053","title":"How Uber Eats selects your delivery driver","category":"Delivery","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats uses an algorithm to assign delivery drivers based on proximity to the restaurant, estimated delivery time, driver ratings, and current demand. The system aims to minimize delivery time while balancing driver availability. In some cases, your order may be batched with another delivery if both orders are going in the same direction."},
+  {"id":"doc_054","title":"Saved addresses and locations","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"You can save multiple delivery addresses in your Uber Eats account. Go to Account, then Saved Places to add home, work, and other frequently used addresses. You can switch between saved addresses when placing an order. Each address can have its own delivery instructions."},
+  {"id":"doc_055","title":"Restaurant search and filters","category":"General","source_url":"https://help.uber.com/en/ubereats","content":"You can search for specific restaurants, cuisines, or dishes on Uber Eats using the search bar. Filters allow you to narrow results by cuisine type, dietary preferences (vegetarian, vegan, gluten-free), price range, delivery time, rating, and promotions. The home screen shows curated categories and personalized recommendations based on your order history."},
+  {"id":"doc_056","title":"Uber Eats grocery delivery","category":"Ordering","source_url":"https://help.uber.com/en/ubereats","content":"In addition to restaurant food, Uber Eats also delivers groceries and convenience items in select areas. Browse the Grocery section in the app to find available stores. Grocery orders may have different delivery fees and service fees than restaurant orders. Items may be substituted if out of stock, and you can set substitution preferences."},
+  {"id":"doc_057","title":"Managing notifications","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"You can customize Uber Eats notifications in the app settings. Choose which alerts you want to receive, including order updates, promotional offers, delivery status, and account activity. Push notifications for order status are recommended to stay informed about your delivery."},
+  {"id":"doc_058","title":"Accessibility features","category":"Account","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats is committed to accessibility. The app supports screen readers and large text options. If you require special accommodations for delivery such as the driver coming to your door for mobility reasons, add this information in your delivery instructions. Contact support if you experience any accessibility barriers."},
+  {"id":"doc_059","title":"Reordering a previous meal","category":"Ordering","source_url":"https://help.uber.com/en/ubereats","content":"To quickly reorder a previous meal on Uber Eats, go to Orders and find the past order you want to repeat. Tap Reorder and the same items will be added to your cart. You can modify the order before placing it. If any items are no longer available, the app will notify you. Reordering uses the current menu prices."},
+  {"id":"doc_060","title":"Uber Eats customer support hours","category":"Support","source_url":"https://help.uber.com/en/ubereats","content":"Uber Eats customer support is available 24/7 through the in-app help center. Live chat support is available during extended hours. For urgent issues related to active deliveries, support is prioritized. Uber One members receive priority support with typically shorter wait times. You can also reach Uber Eats support by phone at 800-253-6882."}
 ]
