@@ -82,13 +82,18 @@ For out-of-scope:
 
 ## Important Rules
 - ALWAYS use retrieved context to inform your decisions
-- For order-specific requests (track, refund, report), use the appropriate tool
+- **CRITICAL: If the user mentions an order ID/number AND describes a problem, ALWAYS use a tool. Never just "answer" when an action is needed.**
+- If the user mentions an order number + missing items → tool_call report_missing_items (extract both order_id and missing_items)
+- If the user mentions an order number + damage/spill/cold → tool_call report_delivery_problem
+- If the user mentions an order number + wrong items → tool_call report_wrong_items
+- If the user says "yes", "confirm", "proceed", "go ahead" → look at the conversation history to understand what they're confirming, then call the appropriate tool
 - "Where is my order?" → track_order (NOT a delivery problem report)
 - "What's your refund policy?" → answer from knowledge (NOT check_refund_status tool)
-- "My food arrived cold" → report_delivery_problem tool
+- "My food arrived cold" (no order ID) → report_delivery_problem tool (you'll collect the order_id next)
 - When citing knowledge, reference the source article title
 - Be empathetic, concise, and helpful
-- If a tool requires parameters you don't have, indicate what you have and what's missing
+- If a tool requires parameters you don't have, extract what you can and the system will prompt for the rest
+- NEVER ask the user to confirm before starting a tool — just start collecting parameters and execute
 """
 
 
@@ -238,6 +243,113 @@ def _try_extract_params(session_id: str, tool_name: str, user_msg: str):
             store_param(session_id, tool_name, "promo_code", promo_match.group(1))
 
 
+def _pre_route_tool(user_msg: str, history: list[dict]) -> tuple | None:
+    """
+    Deterministic pre-routing for obvious tool cases.
+    Returns (tool_name, extracted_params) or None.
+    Bypasses the LLM decision when the intent is unambiguous.
+    """
+    msg_lower = user_msg.lower()
+
+    # ── Skip pre-routing for QUESTIONS (let RAG handle these) ──
+    question_indicators = [
+        "what is", "what's", "whats", "what are", "how do", "how does", "how can", "how long",
+        "when do", "when does", "when can", "why do", "why does", "why is",
+        "can i", "can you", "do you", "is there", "are there",
+        "policy", "policies", "explain", "tell me about", "how to", "what happens",
+        "do i get", "am i eligible", "how much", "what if", "does uber",
+        "i want to know", "i want the", "i need to know", "information about",
+        "?",  # Any question mark = likely a question, not an action
+    ]
+    if any(q in msg_lower for q in question_indicators):
+        return None  # Let the LLM + RAG handle knowledge questions
+
+    # Extract order ID if present
+    order_match = re.search(r"\b(\d{5,7})\b", user_msg)
+    order_id = order_match.group(1) if order_match else None
+
+    # Extract ticket ID if present
+    ticket_match = re.search(r"(UE-\d{4,8})", user_msg, re.IGNORECASE)
+
+    # ── Order ID + issue keywords → direct tool call ──
+    if order_id:
+        # Missing items
+        if any(kw in msg_lower for kw in ["missing", "forgot", "not included", "didn't get", "left out", "without"]):
+            # Try to extract what's missing (everything after the keyword)
+            missing = re.split(r"missing|forgot|not included|didn't get|left out|without", msg_lower, maxsplit=1)
+            missing_text = missing[-1].strip().strip(".,!") if len(missing) > 1 else ""
+            params = {"order_id": order_id}
+            if missing_text and len(missing_text) > 1:
+                params["missing_items"] = missing_text
+            return ("report_missing_items", params)
+
+        # Wrong items
+        if any(kw in msg_lower for kw in ["wrong item", "incorrect item", "received wrong", "wrong order", "not what i ordered"]):
+            return ("report_wrong_items", {"order_id": order_id})
+
+        # Delivery problems
+        if any(kw in msg_lower for kw in ["not delivered", "never arrived", "didn't arrive", "never received"]):
+            return ("report_delivery_problem", {"order_id": order_id, "problem_type": "not delivered"})
+        if any(kw in msg_lower for kw in ["damaged", "spilled", "crushed", "broken"]):
+            return ("report_delivery_problem", {"order_id": order_id, "problem_type": "damaged"})
+        if any(kw in msg_lower for kw in ["cold food", "arrived cold", "food was cold", "not hot"]):
+            return ("report_delivery_problem", {"order_id": order_id, "problem_type": "cold food"})
+        if any(kw in msg_lower for kw in ["late", "took too long", "slow delivery"]):
+            return ("report_delivery_problem", {"order_id": order_id, "problem_type": "late"})
+
+        # Tracking
+        if any(kw in msg_lower for kw in ["where is", "track", "status", "eta", "how long"]):
+            return ("track_order", {"order_id": order_id})
+
+        # Refund check
+        if any(kw in msg_lower for kw in ["refund", "money back", "reimburs"]):
+            return ("check_refund_status", {"order_id": order_id})
+
+        # Cancel
+        if any(kw in msg_lower for kw in ["cancel"]):
+            return ("cancel_order", {"order_id": order_id})
+
+        # View details
+        if any(kw in msg_lower for kw in ["details", "receipt", "show me order", "view order", "order info"]):
+            return ("view_order_details", {"order_id": order_id})
+
+    # ── Ticket lookup ──
+    if ticket_match:
+        return ("lookup_ticket", {"ticket_id": ticket_match.group(1).upper()})
+
+    # ── No order ID but clear ACTION request (requires possessive language) ──
+    if any(kw in msg_lower for kw in ["my order has missing", "my items are missing", "i have missing items", "i got missing items", "my food is missing"]):
+        return ("report_missing_items", {})
+    if any(kw in msg_lower for kw in ["my order never arrived", "never got my order", "my food never came", "i never received my order"]):
+        return ("report_delivery_problem", {"problem_type": "not delivered"})
+    if any(kw in msg_lower for kw in ["my food arrived damaged", "my order was damaged", "my food was spilled", "my order arrived broken"]):
+        return ("report_delivery_problem", {"problem_type": "damaged"})
+
+    # ── Confirmation from history ──
+    confirms = {"yes", "y", "ok", "sure", "confirm", "proceed", "go ahead", "yeah", "yep", "do it", "please", "yes please", "yes please assist me"}
+    if msg_lower.strip().rstrip(".!,") in confirms and len(history) >= 2:
+        # Look at what the assistant last suggested
+        last_bot = [h["content"] for h in history if h["role"] == "assistant"]
+        if last_bot:
+            last = last_bot[-1].lower()
+            # Re-extract order ID and issue from the last assistant message
+            prev_order = re.search(r"\b(\d{5,7})\b", last_bot[-1])
+            if prev_order:
+                oid = prev_order.group(1)
+                if any(kw in last for kw in ["missing", "report"]):
+                    return ("report_missing_items", {"order_id": oid})
+                if any(kw in last for kw in ["deliver", "arrived", "damage"]):
+                    return ("report_delivery_problem", {"order_id": oid})
+                if any(kw in last for kw in ["refund"]):
+                    return ("check_refund_status", {"order_id": oid})
+                if any(kw in last for kw in ["cancel"]):
+                    return ("cancel_order", {"order_id": oid})
+                if any(kw in last for kw in ["escalat", "support", "specialist"]):
+                    return ("contact_support", {})
+
+    return None
+
+
 def _handle_followup(session_id: str, user_msg: str, customer_id: str) -> str:
     """Continue multi-turn tool parameter collection."""
     current_tool = get_state(session_id, "current_tool")
@@ -284,6 +396,41 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
         add_message(session_id, "assistant", response)
         return {"response": response, "intent": f"tool:{current_tool}", "confidence": 1.0, "sources": [], "eval_score": None}
 
+    # ── Step 3b: Short confirmation with no active tool — check history ──
+    # If user says "yes"/"ok"/"sure" and the last assistant message suggested a tool action,
+    # re-run the LLM with explicit history so it picks up context
+    short_confirms = {"yes", "y", "ok", "sure", "confirm", "proceed", "go ahead", "yeah", "yep", "do it", "please"}
+    if user_message.strip().lower().rstrip(".!") in short_confirms and len(history) >= 2:
+        # Inject a hint into the user message so the LLM has context
+        last_assistant = [h for h in history if h["role"] == "assistant"]
+        if last_assistant:
+            user_message_augmented = f"The user said '{user_message}' to confirm. Previous assistant message was: {last_assistant[-1]['content'][:300]}. Determine what action to take based on this context."
+        else:
+            user_message_augmented = user_message
+    else:
+        user_message_augmented = user_message
+
+    # ── Step 3c: Pre-routing — deterministic tool matching for obvious cases ──
+    # If message clearly matches a tool pattern, skip the LLM decision entirely.
+    # This prevents the LLM from choosing "answer" when it should call a tool.
+    pre_route = _pre_route_tool(user_message, history)
+    if pre_route:
+        tool_name, extracted_params = pre_route
+        # Still do RAG retrieval so the tool execution has policy context
+        docs = retrieve(user_message, k=5)
+        sources = [
+            {"title": getattr(d, "metadata", {}).get("title", ""), "url": getattr(d, "metadata", {}).get("source_url", ""), "category": getattr(d, "metadata", {}).get("category", "")}
+            for d in docs
+        ]
+        intent = f"tool:{tool_name}"
+        try:
+            response = _handle_tool_call(session_id, tool_name, extracted_params, user_message, customer_id)
+        except Exception as e:
+            response = f"I encountered an error: {str(e)[:100]}. Please try again."
+
+        add_message(session_id, "assistant", response)
+        return {"response": response, "intent": intent, "confidence": 1.0, "sources": sources, "eval_score": None}
+
     # ── Step 4: RAG Retrieval (ALWAYS — this is the core) ──
     docs = retrieve(user_message, k=5)
     rag_context = "\n\n".join(
@@ -296,7 +443,7 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
     ]
 
     # ── Step 5: Augmented LLM Decision (ReAct: Reason + Act) ──
-    decision = _rag_decision(user_message, history, rag_context)
+    decision = _rag_decision(user_message_augmented, history, rag_context)
 
     action = decision.get("action", "answer")
     intent = action
@@ -321,7 +468,10 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
         extracted = decision.get("extracted_params", {})
         reasoning = decision.get("reasoning", "")
         intent = f"tool:{tool_name}"
-        response = _handle_tool_call(session_id, tool_name, extracted, user_message, customer_id)
+        try:
+            response = _handle_tool_call(session_id, tool_name, extracted, user_message, customer_id)
+        except Exception as e:
+            response = f"I encountered an error processing your request. Could you try again? (Error: {str(e)[:100]})"
 
     elif action == "answer":
         response = decision.get("response", "")
@@ -339,6 +489,16 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
     if not response:
         response = "I'm sorry, I wasn't able to process that. Could you rephrase your question?"
 
+    # Sanitize: if response looks like raw JSON from the LLM, re-generate naturally
+    if response.strip().startswith('{"action"') or response.strip().startswith("{'action"):
+        try:
+            response = chat_completion(
+                [{"role": "user", "content": f"Based on this context, respond naturally to the customer (NOT JSON):\n\nUser: {user_message}\nDecision: {response[:500]}\n\nProvide a helpful, natural language response."}],
+                temperature=0.3, max_tokens=512,
+            )
+        except Exception:
+            response = "I'm processing your request. Could you please try again?"
+
     # ── Step 6: Output Guardrails ──
     output_issue = check_output_guardrails(response)
     if output_issue:
@@ -351,12 +511,12 @@ def process_message(session_id: str, user_message: str, customer_id: str = "") -
     # If evaluator fails the response, try once more with explicit instruction
     if not eval_result.get("pass", True) and eval_result.get("issue"):
         retry_msgs = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": "You are a helpful Uber Eats customer support agent. Respond naturally in plain language. Do NOT respond with JSON."},
             {"role": "user", "content": (
                 f"Context:\n{rag_context}\n\n"
                 f"User: {user_message}\n\n"
                 f"Your previous response was flagged: {eval_result['issue']}\n"
-                f"Please provide an improved response. Respond naturally (not JSON)."
+                f"Please provide an improved, natural language response."
             )},
         ]
         response = chat_completion(retry_msgs, temperature=0.3)
