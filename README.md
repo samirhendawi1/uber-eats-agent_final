@@ -48,20 +48,18 @@ User Message
 
 ## Course Concepts Implemented (RSM8430)
 
-
-| Concept                         | Implementation                                            | File                         |
-| ------------------------------- | --------------------------------------------------------- | ---------------------------- |
-| **RAG Pipeline**                | Ingestion → chunking → ChromaDB embedding → MMR retrieval | `vectorstore.py`             |
-| **Augmented LLM**               | LLM with RAG + Tools + Memory (the 3 augmentations)       | `agent.py`                   |
-| **ReAct Pattern**               | Retrieve → Reason → Act decision loop                     | `agent.py`                   |
-| **Tool Use / Function Calling** | 11 tools the LLM selects via structured JSON output       | `tools.py`, `actions.py`     |
-| **Agentic Workflows**           | Multi-turn parameter collection, prompt chaining          | `agent.py`                   |
-| **Evaluator-Optimizer**         | LLM-as-Judge scores responses, retries if score < 3       | `agent.py`                   |
-| **Guardrails**                  | Input (injection/safety) + Output (validation) layers     | `guardrails.py`              |
-| **Memory**                      | Short-term (conversation) + Long-term (SQLite sessions)   | `memory.py`                  |
-| **Evaluation**                  | Rule-based checks + LLM-as-Judge scoring                  | `evaluation.py`              |
-| **Source Attribution**          | RAG retrieval includes source titles + URLs               | `agent.py`, `vectorstore.py` |
-
+| Concept | Implementation | File |
+|---|---|---|
+| **RAG Pipeline** | Ingestion → chunking → ChromaDB embedding → MMR retrieval | `vectorstore.py` |
+| **Augmented LLM** | LLM with RAG + Tools + Memory (the 3 augmentations) | `agent.py` |
+| **ReAct Pattern** | Retrieve → Reason → Act decision loop | `agent.py` |
+| **Tool Use / Function Calling** | 11 tools the LLM selects via structured JSON output | `tools.py`, `actions.py` |
+| **Agentic Workflows** | Multi-turn parameter collection, prompt chaining | `agent.py` |
+| **Evaluator-Optimizer** | LLM-as-Judge scores responses, retries if score < 3 | `agent.py` |
+| **Guardrails** | Input (injection/safety) + Output (validation) layers | `guardrails.py` |
+| **Memory** | Short-term (conversation) + Long-term (SQLite sessions) | `memory.py` |
+| **Evaluation** | Rule-based checks + LLM-as-Judge scoring | `evaluation.py` |
+| **Source Attribution** | RAG retrieval includes source titles + URLs | `agent.py`, `vectorstore.py` |
 
 ## Key Design: RAG Drives Tool Selection
 
@@ -77,18 +75,17 @@ Unlike typical chatbots with hardcoded intent classification, our agent uses RAG
 
 ## Tool Categories
 
-
-| Category          | Tools                                                                                                               | Resolution                  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **Instant**       | track_order, check_refund_status, view_order_details, contact_driver, apply_promo_code, cancel_order, lookup_ticket | Immediate response          |
-| **Auto-resolve**  | report_missing_items, report_delivery_problem (damaged/late/cold)                                                   | Automatic refund + ticket   |
-| **Investigation** | report_delivery_problem (not delivered), report_wrong_items                                                         | Ticket with 2-24hr response |
-| **Escalation**    | contact_support                                                                                                     | Human agent queue           |
-
+| Category | Tools | Resolution |
+|---|---|---|
+| **Instant** | track_order, check_refund_status, view_order_details, contact_driver, apply_promo_code, cancel_order, lookup_ticket | Immediate response |
+| **Auto-resolve** | report_missing_items, report_delivery_problem (damaged/late/cold) | Automatic refund + ticket |
+| **Investigation** | report_delivery_problem (not delivered), report_wrong_items | Ticket with 2-24hr response |
+| **Escalation** | contact_support | Human agent queue |
 
 ## Setup
 
 ```bash
+cd uber-eats-agent
 python3 -m venv venv
 source venv/bin/activate
 pip install chromadb sentence-transformers streamlit requests pydantic
@@ -107,23 +104,20 @@ python evaluation.py --judge
 
 ## Files
 
-
-| File             | Purpose                                             |
-| ---------------- | --------------------------------------------------- |
-| `agent.py`       | RAG-first agentic orchestrator (core)               |
-| `vectorstore.py` | ChromaDB vector store (no LangChain)                |
-| `tools.py`       | 11 tool definitions (instant/ticket/escalation)     |
-| `actions.py`     | Tool execution with auto-resolve logic              |
-| `tickets_db.py`  | SQLite ticket persistence + lookup                  |
-| `guardrails.py`  | Input + output guardrails                           |
-| `memory.py`      | SQLite conversation memory                          |
-| `llm_client.py`  | qwen3-30b endpoint wrapper                          |
-| `orders_db.py`   | 60 sample orders (CSV)                              |
-| `users_db.py`    | 6 demo accounts                                     |
-| `evaluation.py`  | Rule-based + LLM-as-Judge eval suite                |
-| `app.py`         | Streamlit frontend (chat, orders, tickets, account) |
-
+| File | Purpose |
+|---|---|
+| `agent.py` | RAG-first agentic orchestrator (core) |
+| `vectorstore.py` | ChromaDB vector store (no LangChain) |
+| `tools.py` | 11 tool definitions (instant/ticket/escalation) |
+| `actions.py` | Tool execution with auto-resolve logic |
+| `tickets_db.py` | SQLite ticket persistence + lookup |
+| `guardrails.py` | Input + output guardrails |
+| `memory.py` | SQLite conversation memory |
+| `llm_client.py` | qwen3-30b endpoint wrapper |
+| `orders_db.py` | 60 sample orders (CSV) |
+| `users_db.py` | 6 demo accounts |
+| `evaluation.py` | Rule-based + LLM-as-Judge eval suite |
+| `app.py` | Streamlit frontend (chat, orders, tickets, account) |
 
 ## Team
-
 Group 17 — Samir Hendawi, Yuyan Zhang, Jiaer Jiang, Ce Shen, Junyan Yue
