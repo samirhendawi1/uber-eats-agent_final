@@ -1,12 +1,13 @@
-"""ChromaDB vector store — singleton pattern to avoid NotFoundError on Cloud."""
+"""ChromaDB vector store with Cloud-safe paths."""
 
 from __future__ import annotations
 import json, os
 import chromadb
 from chromadb.utils import embedding_functions
-from config import EMBEDDING_MODEL, CHROMA_DIR, KNOWLEDGE_FILE, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K
+from config import EMBEDDING_MODEL, KNOWLEDGE_FILE, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, WRITABLE_DIR
 
-# Singleton — one collection shared across build + retrieve
+CHROMA_DIR = os.path.join(WRITABLE_DIR, "chroma_db")
+
 _collection = None
 
 
@@ -30,24 +31,18 @@ def build_vectorstore(force: bool = False):
     global _collection
     ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBEDDING_MODEL)
 
-    # Use in-memory client on Cloud (no persist issues), persistent locally
-    use_persistent = os.path.isdir(os.path.dirname(CHROMA_DIR))
-    try:
-        if use_persistent:
-            client = chromadb.PersistentClient(path=CHROMA_DIR)
-        else:
-            client = chromadb.Client()
-    except Exception:
-        client = chromadb.Client()
+    os.makedirs(CHROMA_DIR, exist_ok=True)
+    client = chromadb.PersistentClient(path=CHROMA_DIR)
 
     # Check if already built
-    try:
-        col = client.get_collection("uber_eats_kb", embedding_function=ef)
-        if col.count() > 0 and not force:
-            _collection = col
-            return col
-    except Exception:
-        pass
+    if not force:
+        try:
+            col = client.get_collection("uber_eats_kb", embedding_function=ef)
+            if col.count() > 0:
+                _collection = col
+                return col
+        except Exception:
+            pass
 
     # Build from scratch
     try:
@@ -85,17 +80,8 @@ def retrieve(query: str, k: int = TOP_K) -> list[SimpleDocument]:
     global _collection
     if _collection is None:
         build_vectorstore()
-    if _collection is None:
-        return []
 
-    try:
-        results = _collection.query(query_texts=[query], n_results=k)
-    except Exception:
-        # Rebuild and retry once
-        build_vectorstore(force=True)
-        if _collection is None:
-            return []
-        results = _collection.query(query_texts=[query], n_results=k)
+    results = _collection.query(query_texts=[query], n_results=k)
 
     docs = []
     if results and results.get("documents") and results["documents"][0]:

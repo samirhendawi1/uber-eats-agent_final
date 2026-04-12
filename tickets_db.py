@@ -2,10 +2,7 @@
 
 from __future__ import annotations
 import json, random, sqlite3, string, time
-from config import DATA_DIR
-import os
-
-TICKETS_DB = os.path.join(DATA_DIR, "tickets.db")
+from config import TICKETS_DB
 
 
 def _connect():

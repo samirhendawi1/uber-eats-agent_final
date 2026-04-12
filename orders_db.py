@@ -10,9 +10,8 @@ Updated fields on actions:
 
 from __future__ import annotations
 import csv, os, sqlite3
-from config import DATA_DIR
+from config import DATA_DIR, ORDERS_DB
 
-ORDERS_DB = os.path.join(DATA_DIR, "orders.db")
 ORDERS_CSV = os.path.join(DATA_DIR, "orders.csv")
 
 
