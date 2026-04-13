@@ -30,11 +30,10 @@ class RemoteEmbeddingFunction:
         }
         self.model = model
 
-    def __call__(self, input: list[str]) -> list[list[float]]:
-        """Embed a list of texts via the remote API."""
+    def _embed(self, texts: list[str]) -> list[list[float]]:
         all_embeddings = []
-        for i in range(0, len(input), 64):
-            batch = input[i:i + 64]
+        for i in range(0, len(texts), 64):
+            batch = texts[i:i + 64]
             resp = requests.post(
                 self.url,
                 headers=self.headers,
@@ -47,6 +46,14 @@ class RemoteEmbeddingFunction:
             all_embeddings.extend([d["embedding"] for d in sorted_data])
         return all_embeddings
 
+    def __call__(self, input: list[str]) -> list[list[float]]:
+        return self._embed(input)
+
+    def embed_documents(self, documents: list[str]) -> list[list[float]]:
+        return self._embed(documents)
+
+    def embed_query(self, input: list[str]) -> list[list[float]]:
+        return self._embed(input)
 
 def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
     chunks = []
