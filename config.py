@@ -8,7 +8,9 @@ LLM_MODEL = os.getenv("LLM_MODEL", "qwen3-30b-a3b-fp8")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "1007638335")
 
 # ── Embedding ─────────────────────────────────────────────────────────
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_BASE_URL = os.getenv("EMBEDDING_BASE_URL", "https://rsm-8430-a2.bjlkeng.io")
+EMBEDDING_API_KEY = os.getenv("EMBEDDING_API_KEY", "1007638335")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 
 # ── RAG ───────────────────────────────────────────────────────────────
 CHUNK_SIZE = 400
