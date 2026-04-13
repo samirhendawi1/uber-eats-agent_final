@@ -1,10 +1,12 @@
-"""ChromaDB vector store with Cloud-safe paths."""
+"""ChromaDB vector store with remote embedding endpoint."""
 
 from __future__ import annotations
-import json, os
+import json, os, requests
 import chromadb
-from chromadb.utils import embedding_functions
-from config import EMBEDDING_MODEL, KNOWLEDGE_FILE, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, WRITABLE_DIR
+from config import (
+    EMBEDDING_BASE_URL, EMBEDDING_API_KEY, EMBEDDING_MODEL,
+    KNOWLEDGE_FILE, CHUNK_SIZE, CHUNK_OVERLAP, TOP_K, WRITABLE_DIR,
+)
 
 CHROMA_DIR = os.path.join(WRITABLE_DIR, "chroma_db")
 
@@ -15,6 +17,35 @@ class SimpleDocument:
     def __init__(self, page_content: str, metadata: dict | None = None):
         self.page_content = page_content
         self.metadata = metadata or {}
+
+
+class RemoteEmbeddingFunction:
+    """ChromaDB-compatible embedding function that calls the remote API."""
+
+    def __init__(self, base_url: str, api_key: str, model: str):
+        self.url = f"{base_url}/v1/embeddings"
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        }
+        self.model = model
+
+    def __call__(self, input: list[str]) -> list[list[float]]:
+        """Embed a list of texts via the remote API."""
+        all_embeddings = []
+        for i in range(0, len(input), 64):
+            batch = input[i:i + 64]
+            resp = requests.post(
+                self.url,
+                headers=self.headers,
+                json={"model": self.model, "input": batch},
+                timeout=120,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            sorted_data = sorted(data["data"], key=lambda x: x["index"])
+            all_embeddings.extend([d["embedding"] for d in sorted_data])
+        return all_embeddings
 
 
 def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
@@ -29,12 +60,11 @@ def _chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OV
 
 def build_vectorstore(force: bool = False):
     global _collection
-    ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBEDDING_MODEL)
+    ef = RemoteEmbeddingFunction(EMBEDDING_BASE_URL, EMBEDDING_API_KEY, EMBEDDING_MODEL)
 
     os.makedirs(CHROMA_DIR, exist_ok=True)
     client = chromadb.PersistentClient(path=CHROMA_DIR)
 
-    # Check if already built
     if not force:
         try:
             col = client.get_collection("uber_eats_kb", embedding_function=ef)
@@ -44,7 +74,6 @@ def build_vectorstore(force: bool = False):
         except Exception:
             pass
 
-    # Build from scratch
     try:
         client.delete_collection("uber_eats_kb")
     except Exception:
