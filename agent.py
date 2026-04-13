@@ -252,6 +252,11 @@ def _pre_route_tool(user_msg: str, history: list[dict]) -> tuple | None:
     """
     msg_lower = user_msg.lower()
 
+    # ── Ticket lookup ALWAYS routes to tool (even with question words) ──
+    ticket_match = re.search(r"(UE-\d{4,8})", user_msg, re.IGNORECASE)
+    if ticket_match:
+        return ("lookup_ticket", {"ticket_id": ticket_match.group(1).upper()})
+
     # ── Skip pre-routing for QUESTIONS (let RAG handle these) ──
     question_indicators = [
         "what is", "what's", "whats", "what are", "how do", "how does", "how can", "how long",
@@ -314,9 +319,6 @@ def _pre_route_tool(user_msg: str, history: list[dict]) -> tuple | None:
         if any(kw in msg_lower for kw in ["details", "receipt", "show me order", "view order", "order info"]):
             return ("view_order_details", {"order_id": order_id})
 
-    # ── Ticket lookup ──
-    if ticket_match:
-        return ("lookup_ticket", {"ticket_id": ticket_match.group(1).upper()})
 
     # ── No order ID but clear ACTION request (requires possessive language) ──
     if any(kw in msg_lower for kw in ["my order has missing", "my items are missing", "i have missing items", "i got missing items", "my food is missing"]):
