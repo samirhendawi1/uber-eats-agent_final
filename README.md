@@ -122,7 +122,7 @@ The knowledge base consists of **60 articles** sourced from the [Uber Eats Help 
 
 ### Scraping
 
-**`scraper.py`** fetches articles from 20 known Uber Eats help article URLs using `requests` + `BeautifulSoup`. For each URL it:
+**`scraper.py`** fetches articles from 60 known Uber Eats help article URLs using `requests` + `BeautifulSoup`. For each URL it:
 
 1. Sends an HTTP request with browser-like headers (User-Agent, Accept)
 2. Parses the HTML and tries multiple CSS selectors to find article content (`div.article-content`, `main article`, `<p>` tags)
@@ -131,7 +131,6 @@ The knowledge base consists of **60 articles** sourced from the [Uber Eats Help 
 5. Merges scraped content with the 40 additional curated articles not in the scrape list
 6. Respects rate limits with 1-second delays between requests
 
-**Why only 20 URLs?** Uber's help center is a React single-page app. When `requests` fetches a page, it gets raw HTML before JavaScript runs — most pages return empty `<div>` containers. These 20 URLs are the ones confirmed to return server-side rendered content. A headless browser (Selenium/Playwright) would expand coverage but adds ~500MB in dependencies and can't run on Streamlit Cloud.
 
 ```bash
 # Run locally to refresh the knowledge base
