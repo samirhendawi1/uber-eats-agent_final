@@ -254,10 +254,9 @@ with st.sidebar:
         st.markdown(
             "📍 Track order . 💰 Refund status\n\n"
             "📋 Order details . 📱 Contact driver\n\n"
-            "🏷 Promo code . ❌ Cancel order\n\n"
+            "🔍 Ticket lookup ❌ Cancel order\n\n"
             "📦 Missing items . 🔄 Wrong items\n\n"
             "🚗 Delivery issues . 📞 Support\n\n"
-            "🔍 Ticket lookup"
         )
 
     st.divider()
